@@ -4,6 +4,13 @@
     <title>Yilei's User Page</title>
     <meta name="author" content="Yilei Wu">
     <link rel="css file" href="dummy.css">
+    <style>
+      .myDiv {
+        border: 5px outset rgb(144, 188, 206);
+        background-color: rgb(190, 186, 216);
+        text-align: center;
+      }
+      </style>
   </head>
 
   <body>
@@ -39,14 +46,17 @@
     <nav></nav>
     
   <div></div>
+  <div class="myDiv">
+    <h2>here is me wit a cute cat </h2>
+    <p>meet OC!!</p>
+    <figure>
+      <img src="oc.png" alt="OC" style="width:50%">
+      <figcaption>OC and I</figcaption>
+    </figure>
+  </div>
   <span></span>
   <hr></hr>
 
-
-  <figure>
-    <img src="oc.png" alt="OC" style="width:100%">
-    <figcaption>OC and I</figcaption>
-  </figure>
 
 </main>
     
@@ -59,56 +69,126 @@
   <br></br><br></br><br></br><br></br><br></br>
     
     
-  <img></img>
-  <picture></picture>
-  <iframe></iframe>
-  <audio></audio>
-  <video></video>
-  <source></source>
-  <canvas></canvas>
-  <svg></svg>
+  <img src="me.jpg" alt="this is me" width="500" height="600">
+  <br></br>
+  <picture>
+    <source media="(min-width:650px)" srcset="sky.jpg">
+    <source media="(min-width:465px)" srcset="sky.jpg">
+    <img src="sky.jpg" alt="picture i took of the sky" style="width:auto;">
+  </picture>
+  <br></br>
+  <iframe src="https://ucsd.edu/" title="UCSD"></iframe>
+  <br></br>
+  <audio controls>
+    <source src="Angel 2 Me.mp3" type="audio/mpeg">
+  </audio>
+  <br></br>
+  <video width="320" height="240" controls>
+    <source src="fall.MOV" type="video/mp4">
+  </video>
+  <br></br>
+  <canvas id="myCanvas">
+    </canvas>
+    <script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "rgb(190, 186, 216)";
+    ctx.fillRect(20, 20, 500, 50);
+    </script>
+
+  <svg width="300" height="200">
+    <polygon points="100,10 40,198 190,78 10,78 160,198"
+    style="fill:rgb(166, 134, 175);stroke:rgb(108, 86, 114);stroke-width:5;fill-rule:evenodd;" />
+  </svg>
   
   
-  <form></form>
-  <optgroup></optgroup>
-  <label></label>
-  <fieldset></fieldset>
-  <legend></legend>
-  <input></input>
-  <textarea></textarea>
-  <datalist></datalist>
-  <select></select>
-  <option></option>
+  <form action="/action_page.php" method="get">
+    <fieldset>
+      <legend>which one are you?</legend>
+      <input type="checkbox" name="option 1" value="dog">
+      <label for="vehicle1"> I am a dog person</label><br>
+      <input type="checkbox" name="option 2" value="cat" checked>
+      <label for="vehicle3"> I am a cat person</label><br><br>
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+
+  <br></br>
+
+  <label for="pets">pet options:</label>
+  <select  name="pets" id="pets">
+    <optgroup label="Cats">
+     <option value="cat1">Siamese Cat</option>
+     <option value="cat2">Ragdoll Cat</option>
+    </optgroup>
+    <optgroup label="Dogs">
+     <option value="dog1">Golden Retriever</option>
+     <option value="dog2">Husky</option>
+    </optgroup>
+  </select>
+
+  <br></br>
+  <textarea>hellor now choose a pet:</textarea>
+  <br></br>
+  <input list="pr" name="numbers" id="numbers">
+  <datalist id="pr">
+    <option value="Siamese Cat">
+    <option value="Ragdoll Cat">
+    <option value="Golden Retriever">
+    <option value="Husky">
+    <option value="Other">
+  </datalist>
+  <br></br>
+
   
-  <table></table>
-  <tr></tr>
-  <td></td>
-  <th></th>
-  <caption></caption>
-  <col></col>
-  <colgroup></colgroup>
+  <table>
+    <caption>Pros and Cons of Living At Home</caption>
+    <colgroup>
+      <col span="2" style="background-color:rgb(197, 181, 199)">
+      <col style="background-color:rgb(199, 212, 221)">
+    </colgroup>
+    <tr>
+      <th>Pros</th>
+      <th>Cons</th>
+    </tr>
+    <tr>
+      <td>saves money</td>
+      <td>change in learning environment</td>
+    </tr>
+    <tr>
+      <td>closer to family</td>
+      <td>not around friends</td>
+    </tr>
+    <tr>
+      <td>more safe</td>
+      <td>online school :(</td>
+    </tr>
+  </table>
+
   
-  
-  <details></details>
-  <summary></summary>
-  <button></button>
-  <template></template>
+  <details>
+    <summary>so there it is, a peak into my thoughts</summary>
+    <p>my mind is a mess :P</p>
+  </details>
+
+
+  <button onclick="showContent()">a surprise</button>
+  <template>
+    <img src="yuh.JPG" width="300" height="200">
+  </template>
+
+  <script>
+  function showContent() {
+    var temp = document.getElementsByTagName("template")[0];
+    var clon = temp.content.cloneNode(true);
+    document.body.appendChild(clon);
+  }
+  </script>
 
   <footer>*did you enjoy my page?</footer>
 
   </body>
 </html>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
