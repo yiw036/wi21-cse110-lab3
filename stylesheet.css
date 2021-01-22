@@ -1,0 +1,70 @@
+/* background color */
+body {
+    background-color: rgba(152, 200, 230, 0.5);
+}
+/* Class Selector (.class) */
+.center {
+    text-align: center;
+    color:rgb(94, 94, 94);
+  }
+/* ID Selector (#id) */
+#para1 {
+    text-align: start;
+    color: darkcyan;
+}
+
+/* Universal Selector (*) */
+* {
+    text-align: start;
+    color: black;
+}
+
+/* Element Selector (element) */
+p {
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+    color: #867276;
+    margin-left: 20px;
+} 
+
+/* Attribute Selector (e.g. [attribute=foo]) */
+a[target=_blank] {
+    background-color: skyblue;
+}
+/* Pseudo-class Selectors (e.g. p::hover) */
+div:hover {
+    background-color: rgb(179, 141, 62);
+  }
+/**/
+/* Grouping / Combinators */
+/* Selector List (element, element) */
+h2, h3 {
+    color: hsl(216, 42%, 44%);
+    margin-left: 20px;
+}
+/* Descendant Combinator (element element) */
+div p {
+    background-color: lightslategray;
+  }
+/* Child Combinator (element > element) */
+div > p {
+    background-color: rgb(193, 248, 191);
+}
+/* General sibling combinator (element + element) */
+div ~ p {
+    background-color: rgb(117, 175, 127);
+}
+/* Adjacent sibling combinator (element ~ element) */
+div + p {
+    background-color: rgb(78, 107, 87);
+}
+/* Combining Two Selectors (element.class) */
+p.intro { 
+    text-align: left;
+    color: gray;
+}
+
+
