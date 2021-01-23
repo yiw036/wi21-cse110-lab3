@@ -1,16 +1,26 @@
 /* background color */
 body {
-    background-color: rgba(152, 200, 230, 0.5);
+    background-color: lightpink;
 }
+/* Media Query */
+@media screen and (min-width: 700px) {
+    body {
+        background-color: rgba(152, 200, 230, 0.5);
+    }
+  }
 /* Class Selector (.class) */
 .center {
     text-align: center;
     color:rgb(94, 94, 94);
+    text-decoration: underline;
+    font-family: "Audiowide", sans-serif;
   }
 /* ID Selector (#id) */
 #para1 {
+    margin: 25px 50px 75px 100px;
     text-align: start;
     color: darkcyan;
+    font-size:17px;
 }
 
 /* Universal Selector (*) */
@@ -21,14 +31,19 @@ body {
 
 /* Element Selector (element) */
 p {
+    margin: auto;
     text-align: left;
     color: rgb(0, 0, 0);
 }
 
 h1 {
+    font-size: 1cm;
     color: #867276;
     margin-left: 20px;
 } 
+h2 {
+    font-size: 8mm;
+}
 
 /* Attribute Selector (e.g. [attribute=foo]) */
 a[target=_blank] {
@@ -38,12 +53,21 @@ a[target=_blank] {
 div:hover {
     background-color: rgb(179, 141, 62);
   }
-/**/
+  /* mouse over link */
+    a:hover {
+    color: hotpink;
+  }
+  a:active {
+    color: white;
+  }
 /* Grouping / Combinators */
 /* Selector List (element, element) */
 h2, h3 {
     color: hsl(216, 42%, 44%);
-    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 1cm;
+    margin-right: 2cm;
 }
 /* Descendant Combinator (element element) */
 div p {
@@ -55,7 +79,7 @@ div > p {
 }
 /* General sibling combinator (element + element) */
 div ~ p {
-    background-color: rgb(117, 175, 127);
+    background-color: hsla(147, 46%, 42%, 0.658);
 }
 /* Adjacent sibling combinator (element ~ element) */
 div + p {
@@ -65,6 +89,104 @@ div + p {
 p.intro { 
     text-align: left;
     color: gray;
+}
+/*  */
+/* Borders */
+/* border-style,  border-color, border-width, border-radius */
+header.dotted {
+    text-align: center;
+    border-style: dotted;
+    border-color: navy;
+    border-width: 5px;
+    border-radius: 50%;
+}
+
+
+/* Unit */
+div.div1{
+    position: static;
+    max-width: 500px;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    font-size: 105%;
+    border: 1px solid black;
+  }
+  div.div2{
+    position: relative;
+    min-width: 500px;
+    height: 50px;
+    width: 12%;
+    background-color: powderblue;
+  }
+  span {
+    font-size: 0.7em;
+  }
+  #top-div {
+    padding: 25px 50px 75px 100px;
+    font-size: 2rem;
+    width: 300px;
+    border: 5px solid pink;
+    padding: 50px;
+    margin: 20px;
+  }
+
+/* Display */
+li {
+    display: inline;
+  }
+  span {
+    display: block;
+  }
+
+/* Flexbox */
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-item {
+  background: white;
+  color: orange;
+  font-weight: bold;
+  font-size: auto;
+  text-align: center;
+  flex-shrink: 3;
+  flex-basis: auto;
+  align-self: auto;
+}
+/* Grid */
+.grid-container {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 15px;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header"
+      "main main . sidebar"
+      "footer footer footer footer";
+  }
+.grid-item1 {
+    grid-area: header;
+    background: rgb(206, 205, 205);
+    color: rgb(91, 67, 99);
+}
+.grid-item2 {
+    grid-area: main;
+    justify-self: center;
+    background: rgb(91, 67, 99);
+    color:rgb(206, 205, 205);
+}
+.grid-item3 {
+    grid-area: sidebar;
+    background: rgb(178, 145, 182);
+    color: rgb(82, 32, 99);
 }
 
 
