@@ -4,6 +4,7 @@
     <title>Yilei's User Page</title>
     <meta name="author" content="Yilei Wu">
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
   
     <style>
       .myDiv {
@@ -15,30 +16,33 @@
   </head>
 
   <body>
-    <header>WELCOME !!</header>
+    <header class="dotted">WELCOME !!</header>
     <h1 class = "center">Yilei's User Page</h1>
 
     <main>
     <h1>hello, my name is Emily!</h1>
     <p id = "para1">In my free time I go on tiktok :D</p>
-    <aside>I like to sing for fun</aside>
-    <h2>background</h2>
-    <p class = "intro">I am a 3rd year CS major.</p>
+    <div class = "div2"><aside>I like to sing for fun</aside></div>
+    <div class = "div1">
+      <h2>background</h2>
+      <p class = "intro">I am a 3rd year CS major.</p>
+      <span>I go to UCSD.</span>
+    </div>
 
     <hr>
     <section>
     <h3>cat person or dog person?</h3>
       <p>i will make an unordered list below about reasons why you should be a dog person :D</p>
-      <ul>
-        <li>dogs are very loving</li>
-        <li>you can fix your sleep schedule because you have to get up early to walk the doggo</li>
-        <li>dogecoin</li>
+      <ul class="flex-container">
+        <li class="flex-item">dogs are very loving</li>
+        <li class="flex-item">you can fix your sleep schedule because you have to get up early to walk the doggo</li>
+        <li class="flex-item">dogecoin</li>
       </ul>
       <p>now reasons why you should be a cat person:</p>
-      <ol>
-        <li>you dont have to walk them and they clean themselves</li>
-        <li>when their eyes dilate its so adorable</li>
-        <li>you can have personal space</li>
+      <ol class="grid-container">
+        <li class="grid-item1">you dont have to walk them and they clean themselves</li>
+        <li class="grid-item2">when their eyes dilate its so adorable</li>
+        <li class="grid-item3">you can have personal space</li>
       </ol>
     </section>
     <hr>
@@ -56,7 +60,7 @@
   </div>
 </main>
 
-  <div>
+  <div id = "top-div">
     <p><em>Although</em> I love dogs, I love cats <strong>even more</strong>.</p>
   </div>
 
